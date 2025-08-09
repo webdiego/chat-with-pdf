@@ -46,8 +46,8 @@ export default function Chat() {
   }, [messages]);
 
   return (
-    <div className="px-3 mt-5 max-w-lg mx-auto">
-      <ScrollArea className="mb-2 h-[600px] w-full rounded-md border p-4">
+    <div className="px-3 mt-5 max-w-xl mx-auto">
+      <ScrollArea className="mb-2 h-[600px] w-full rounded-md border p-2 mr-2 text-wrap ">
         <div ref={scrollViewportRef}>
           <Messages messages={messages} isThinking={isThinking} />
 
@@ -55,9 +55,9 @@ export default function Chat() {
           {isThinking && <Thinking />}
         </div>
       </ScrollArea>
-      <div></div>
+
       <form
-        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-lg p-2 mb-8 border bg-white border-gray-300 rounded shadow-xl space-y-2 z-20"
+        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl p-2 mb-8 border bg-white border-gray-300 rounded shadow-xl space-y-2 z-20"
         onSubmit={async (event) => {
           event.preventDefault();
 

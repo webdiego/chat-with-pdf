@@ -12,7 +12,7 @@ export default function Messages({ messages, isThinking }: MessagesProps) {
   return (
     <div>
       {messages.map((m) => (
-        <div key={m.id} className="whitespace-pre-wrap">
+        <div key={m.id} className="whitespace-pre-wrap w-full">
           <div className="text-lg font-bold mt-2 w-min">
             {m.role === "user" && (
               <div className="flex items-center bg-yellow-100 px-3 py-2 rounded-lg w-auto">
@@ -39,7 +39,7 @@ export default function Messages({ messages, isThinking }: MessagesProps) {
             if (part.type === "file" && part.mediaType === "application/pdf") {
               return (
                 <iframe
-                  className="my-2"
+                  className="my-2 w-full"
                   key={`${m.id}-pdf-${index}`}
                   src={part.url}
                   width={500}
