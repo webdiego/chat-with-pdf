@@ -47,7 +47,7 @@ export default function Chat() {
 
   return (
     <div className="px-3 mt-5 max-w-xl mx-auto">
-      <ScrollArea className="mb-2 h-[600px] w-full rounded-md border p-2 mr-2 text-wrap ">
+      <ScrollArea className="mb-2 h-[600px] w-full rounded-md border p-2  text-wrap ">
         <div ref={scrollViewportRef}>
           <Messages messages={messages} isThinking={isThinking} />
 
@@ -57,7 +57,7 @@ export default function Chat() {
       </ScrollArea>
 
       <form
-        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl p-2 mb-8 border bg-white border-gray-300 rounded shadow-xl space-y-2 z-20"
+        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-xl p-2 mb-8 border bg-white border-gray-200 rounded shadow-xl space-y-2 z-20"
         onSubmit={async (event) => {
           event.preventDefault();
 
@@ -79,13 +79,13 @@ export default function Chat() {
           }
         }}
       >
-        <Label className="underline">
-          Import your pdf <Import />
+        <Label className="font-semibold text-sm">
+          <Import className="w-5 h-5" /> Import your pdf
         </Label>
         <Input
           type="file"
           accept="application/pdf"
-          className="mt-2"
+          className="mt-2 bg-slate-100 cursor-pointer"
           onChange={(event) => {
             if (event.target.files) {
               setFiles(event.target.files);
