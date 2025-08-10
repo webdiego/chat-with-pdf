@@ -15,14 +15,14 @@ export default function Messages({ messages, isThinking }: MessagesProps) {
         <div key={m.id} className="whitespace-pre-wrap w-full">
           <div className="text-lg font-bold mt-2 w-min">
             {m.role === "user" && (
-              <div className="flex items-center bg-yellow-100 px-3 py-2 rounded-lg w-auto">
-                <User className="w-4 h-4 mr-1" />
-                <p className="text-sm font-semibold">You:</p>
+              <div className="flex items-center bg-slate-100 px-3 py-2 rounded-lg w-auto border">
+                <User className="w-4 h-4 mr-1 " />
+                <p className="text-sm font-medium ">You:</p>
               </div>
             )}
 
             {m.role === "assistant" && !isThinking && (
-              <div className="flex items-center bg-blue-200 px-3 py-2 rounded-lg w-auto">
+              <div className="flex items-center bg-gradient-to-r from-slate-500 to-slate-800 text-white px-3 py-2 rounded-lg w-auto">
                 <Sparkles className="w-4 h-4 mr-1" />
                 <p className="text-sm font-semibold">AI:</p>
               </div>
