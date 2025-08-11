@@ -5,7 +5,7 @@ export default function Thinking() {
   return (
     <div className="whitespace-pre-wrap">
       <div className="text-lg font-bold mt-10 w-min">
-        <div className="flex items-center bg-blue-200 px-3 py-2 rounded-full w-auto">
+        <div className="flex items-center bg-gradient-to-r from-slate-500 to-slate-800 text-white px-3 py-2 rounded-lg w-auto">
           <Sparkles className="w-4 h-4 mr-1" />
           <p className="text-sm font-semibold">AI:</p>
         </div>
